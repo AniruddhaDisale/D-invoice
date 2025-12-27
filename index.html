@@ -9,7 +9,7 @@
 <body>
 
 <header>
-    <h1>Free Invoice Generator</h1>
+    <h1>📄 Free Invoice Generator</h1>
     <p>Simple • GST-ready • No login • Free forever</p>
 </header>
 
@@ -17,23 +17,35 @@
 
     <!-- LEFT: INPUT FORM -->
     <section class="form-section">
-        <h2>Shop Details</h2>
-        <input type="text" id="shopName" placeholder="Shop Name">
-        <input type="text" id="gstin" placeholder="GSTIN (optional)">
+        <h2>🏪 Shop Details</h2>
+        <div class="input-group">
+            <input type="text" id="shopName" placeholder="Shop Name" oninput="updateInvoice()">
+        </div>
+        <div class="input-group">
+            <input type="text" id="gstin" placeholder="GSTIN (optional)" oninput="updateInvoice()">
+        </div>
 
-        <h2>Customer</h2>
-        <input type="text" id="customerName" placeholder="Customer Name (optional)">
+        <h2>👤 Customer</h2>
+        <div class="input-group">
+            <input type="text" id="customerName" placeholder="Customer Name (optional)" oninput="updateInvoice()">
+        </div>
 
-        <h2>Add Item</h2>
-        <input type="text" id="itemName" placeholder="Item Name">
-        <input type="number" id="qty" placeholder="Quantity">
-        <input type="number" id="price" placeholder="Price per item">
+        <h2>📦 Add Item</h2>
+        <div class="input-group">
+            <input type="text" id="itemName" placeholder="Item Name">
+        </div>
+        <div class="input-group">
+            <input type="number" id="qty" placeholder="Quantity" min="1">
+        </div>
+        <div class="input-group">
+            <input type="number" id="price" placeholder="Price per item" min="0" step="0.01">
+        </div>
 
-        <button onclick="addItem()">Add Item</button>
+        <button onclick="addItem()">➕ Add Item</button>
 
         <div class="actions">
-            <button class="secondary" onclick="printInvoice()">Print Invoice</button>
-            <button class="secondary" id="downloadPdf">Download PDF</button>
+            <button class="secondary" onclick="printInvoice()">🖨️ Print</button>
+            <button class="secondary" id="downloadPdf">📥 Download PDF</button>
         </div>
     </section>
 
@@ -52,31 +64,40 @@
             </p>
         </div>
 
-        <p><strong>Customer:</strong> <span id="invCustomer">—</span></p>
+        <div class="customer-section">
+            <p><strong>Customer:</strong> <span id="invCustomer">—</span></p>
+        </div>
 
-        <table>
+        <table id="invoiceTable">
             <thead>
                 <tr>
                     <th>Item</th>
                     <th>Qty</th>
                     <th>Price</th>
                     <th>Total</th>
-                    <th>Press to remove item</th>
+                    <th class="no-print">Action</th>
                 </tr>
             </thead>
-            <tbody id="invoiceItems"></tbody>
+            <tbody id="invoiceItems">
+                <tr>
+                    <td colspan="5" class="empty-state">
+                        <p>No items added yet</p>
+                    </td>
+                </tr>
+            </tbody>
         </table>
 
         <div class="totals">
-            <p hookup>Subtotal: ₹<span id="subTotal">0.00</span></p>
-            <p>CGST (9%): ₹<span id="cgst">0.00</span></p>
-            <p>SGST (9%): ₹<span id="sgst">0.00</span></p>
-            <h3>Total: ₹<span id="grandTotal">0.00</span></h3>
+            <p><span>Subtotal:</span> <span>₹<span id="subTotal">0.00</span></span></p>
+            <p><span>CGST (9%):</span> <span>₹<span id="cgst">0.00</span></span></p>
+            <p><span>SGST (9%):</span> <span>₹<span id="sgst">0.00</span></span></p>
+            <h3><span>Total:</span> <span>₹<span id="grandTotal">0.00</span></span></h3>
         </div>
 
         <footer>
             <small>
-                This tool only generates invoices. GST compliance is user responsibility.
+                This tool only generates invoices. GST compliance is user responsibility.<br>
+                Thank you for your business!
             </small>
         </footer>
     </section>
