@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Invoice Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Free Invoice Generator</h1>
+    <p>Simple • GST-ready • No login • Free forever</p>
+</header>
+
+<main class="app">
+
+    <!-- LEFT: INPUT FORM -->
+    <section class="form-section">
+        <h2>Shop Details</h2>
+        <input type="text" id="shopName" placeholder="Shop Name">
+        <input type="text" id="gstin" placeholder="GSTIN (optional)">
+
+        <h2>Customer</h2>
+        <input type="text" id="customerName" placeholder="Customer Name (optional)">
+
+        <h2>Add Item</h2>
+        <input type="text" id="itemName" placeholder="Item Name">
+        <input type="number" id="qty" placeholder="Quantity">
+        <input type="number" id="price" placeholder="Price per item">
+
+        <button onclick="addItem()">Add Item</button>
+
+        <div class="actions">
+            <button class="secondary" onclick="printInvoice()">Print Invoice</button>
+            <button class="secondary" id="downloadPdf">Download PDF</button>
+        </div>
+    </section>
+
+    <!-- RIGHT: INVOICE PREVIEW -->
+    <section class="invoice-section" id="invoice">
+
+        <div class="invoice-header">
+            <h2 id="invShop">Shop Name</h2>
+            <p id="invGST"></p>
+        </div>
+
+        <div class="invoice-meta">
+            <p>
+                <strong>Invoice No:</strong> <span id="invoiceNo"></span><br>
+                <strong>Date:</strong> <span id="invoiceDate"></span>
+            </p>
+        </div>
+
+        <p><strong>Customer:</strong> <span id="invCustomer">—</span></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Press to remove item</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceItems"></tbody>
+        </table>
+
+        <div class="totals">
+            <p hookup>Subtotal: ₹<span id="subTotal">0.00</span></p>
+            <p>CGST (9%): ₹<span id="cgst">0.00</span></p>
+            <p>SGST (9%): ₹<span id="sgst">0.00</span></p>
+            <h3>Total: ₹<span id="grandTotal">0.00</span></h3>
+        </div>
+
+        <footer>
+            <small>
+                This tool only generates invoices. GST compliance is user responsibility.
+            </small>
+        </footer>
+    </section>
+
+</main>
+
+<!-- PDF LIBRARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
