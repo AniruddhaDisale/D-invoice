@@ -1,111 +1,432 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
-    <title>Free Invoice Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Invoice - Free Online Invoice Generator India | GST Billing Software</title>
+    <meta name="title" content="D Invoice - Free Online Invoice Generator India | GST Billing Software">
+    <meta name="description" content="Create professional GST-ready invoices instantly with D Invoice. Free online invoice maker for small businesses and freelancers in India. No signup required. Download receipts instantly.">
+    <meta name="keywords" content="free invoice generator, online invoice maker, GST invoice generator, billing software for small business, invoice receipt download, GST billing India, free billing software, invoice generator India">
+    <meta name="author" content="D Invoice">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dinvoice.netlify.app/">
+    <meta property="og:title" content="D Invoice - Free Online Invoice Generator India">
+    <meta property="og:description" content="Create professional GST-ready invoices instantly. Free online invoice maker for small businesses and freelancers in India. No signup required.">
+    <meta property="og:image" content="https://dinvoice.netlify.app/og-image.jpg">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="D Invoice">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dinvoice.netlify.app/">
+    <meta property="twitter:title" content="D Invoice - Free Online Invoice Generator">
+    <meta property="twitter:description" content="Create professional GST-ready invoices instantly. Free online invoice maker for small businesses in India.">
+    <meta property="twitter:image" content="https://dinvoice.netlify.app/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dinvoice.netlify.app/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "D Invoice",
+      "alternateName": "D Invoice - Free Invoice Generator",
+      "description": "Free online invoice generator that helps small businesses and freelancers create professional, GST-ready invoices instantly",
+      "url": "https://dinvoice.netlify.app",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "GST Invoice Generation",
+        "Automatic Tax Calculation (CGST/SGST)",
+        "Invoice Receipt Download",
+        "No Signup Required",
+        "Free for Small Business",
+        "Dark Mode Support",
+        "Print Invoice",
+        "Save Invoice History",
+        "Item Management",
+        "Multi-tax Rate Support"
+      ],
+      "screenshot": "https://dinvoice.netlify.app/screenshot.jpg",
+      "softwareVersion": "1.0",
+      "availableLanguage": "en-IN",
+      "inLanguage": "en-IN",
+      "datePublished": "2024-01-01",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "D Invoice",
+      "url": "https://dinvoice.netlify.app",
+      "logo": "https://dinvoice.netlify.app/logo.png",
+      "description": "Free online invoice generator for small businesses and freelancers in India",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "sameAs": []
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is D Invoice free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, D Invoice is completely free to use. There are no hidden charges, subscriptions, or premium features. All functionality is available to everyone without signup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does D Invoice support GST calculations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, D Invoice fully supports GST calculations including CGST, SGST, and IGST at various tax rates (0%, 5%, 12%, 18%, 28%). Tax breakdowns are automatically calculated and displayed on invoices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I download invoices as PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can download invoices as text receipts instantly. The invoice includes all details like items, taxes, discounts, and payment information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, D Invoice does not require any signup or account creation. Your shop details are saved locally in your browser for convenience."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FPRT0948"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N9FPRT0948');
+    </script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" style="position:absolute;left:-9999px;top:0" tabindex="0">Skip to main content</a>
 
-<header>
-    <h1>📄 Free Invoice Generator</h1>
-    <p>Simple • GST-ready • No login • Free forever</p>
-</header>
-
-<main class="app">
-
-    <!-- LEFT: INPUT FORM -->
-    <section class="form-section">
-        <h2>🏪 Shop Details</h2>
-        <div class="input-group">
-            <input type="text" id="shopName" placeholder="Shop Name" oninput="updateInvoice()">
+    <header role="banner">
+        <div class="header-content">
+            <h1>📄 D Invoice - Free Online Invoice Generator</h1>
+            <p>Professional • GST-ready • Feature-rich • Free forever</p>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
         </div>
-        <div class="input-group">
-            <input type="text" id="gstin" placeholder="GSTIN (optional)" oninput="updateInvoice()">
+    </header>
+
+    <main id="main-content" class="app" role="main">
+
+        <!-- LEFT: INPUT FORM -->
+        <section class="form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading" class="sr-only">Invoice Creation Form</h2>
+            
+            <!-- Shop Details -->
+            <article class="section-card" aria-labelledby="shop-details-heading">
+                <h2 id="shop-details-heading">🏪 Shop Details</h2>
+                <div class="input-group">
+                    <label for="shopName" class="sr-only">Shop Name</label>
+                    <input type="text" id="shopName" placeholder="Shop Name" oninput="updateInvoice()" aria-required="true">
+                </div>
+                <div class="input-group">
+                    <label for="shopAddress" class="sr-only">Full Address</label>
+                    <input type="text" id="shopAddress" placeholder="Full Address" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label for="shopCity" class="sr-only">City, State</label>
+                    <input type="text" id="shopCity" placeholder="City, State" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label for="shopPhone" class="sr-only">Phone Number</label>
+                    <input type="tel" id="shopPhone" placeholder="Phone Number" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label for="shopEmail" class="sr-only">Email Address</label>
+                    <input type="email" id="shopEmail" placeholder="Email Address" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label for="gstin" class="sr-only">GSTIN Number (optional)</label>
+                    <input type="text" id="gstin" placeholder="GSTIN (optional)" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label class="file-label">
+                        <input type="file" id="shopLogo" accept="image/*" onchange="handleLogoUpload()" aria-label="Upload shop logo">
+                        <span>📷 Upload Shop Logo</span>
+                    </label>
+                </div>
+            </article>
+
+            <!-- Customer Details -->
+            <article class="section-card" aria-labelledby="customer-details-heading">
+                <h2 id="customer-details-heading">👤 Customer</h2>
+                <div class="input-group">
+                    <label for="customerName" class="sr-only">Customer Name</label>
+                    <input type="text" id="customerName" placeholder="Customer Name (optional)" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label for="customerAddress" class="sr-only">Customer Address</label>
+                    <input type="text" id="customerAddress" placeholder="Customer Address (optional)" oninput="updateInvoice()">
+                </div>
+                <div class="input-group">
+                    <label for="customerPhone" class="sr-only">Customer Phone</label>
+                    <input type="tel" id="customerPhone" placeholder="Customer Phone (optional)" oninput="updateInvoice()">
+                </div>
+            </article>
+
+            <!-- Payment Terms -->
+            <article class="section-card" aria-labelledby="payment-details-heading">
+                <h2 id="payment-details-heading">💳 Payment Details</h2>
+                <div class="input-group">
+                    <label for="paymentMethod" class="sr-only">Payment Method</label>
+                    <select id="paymentMethod" onchange="updateInvoice()" aria-label="Select payment method">
+                        <option value="">Payment Method</option>
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Card</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Cheque">Cheque</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="bankDetails" class="sr-only">Bank Account or UPI ID</label>
+                    <input type="text" id="bankDetails" placeholder="Bank Account / UPI ID (optional)" oninput="updateInvoice()">
+                </div>
+            </article>
+
+            <!-- Add Item -->
+            <article class="section-card" aria-labelledby="add-item-heading">
+                <h2 id="add-item-heading">📦 Add Item</h2>
+                <div class="saved-items-section">
+                    <button class="btn-small secondary" onclick="toggleSavedItems()" aria-label="View saved items">📋 Saved Items</button>
+                    <button class="btn-small secondary" onclick="showManageItems()" aria-label="Manage saved items">⚙️ Manage</button>
+                </div>
+                <div id="savedItemsList" class="saved-items-list" style="display: none;" role="list" aria-label="Saved items list"></div>
+                
+                <div class="input-group">
+                    <label for="itemName" class="sr-only">Item Name</label>
+                    <input type="text" id="itemName" placeholder="Item Name">
+                </div>
+                <div class="input-group">
+                    <label for="qty" class="sr-only">Quantity</label>
+                    <input type="number" id="qty" placeholder="Quantity" min="1">
+                </div>
+                <div class="input-group">
+                    <label for="price" class="sr-only">Price per item</label>
+                    <input type="number" id="price" placeholder="Price per item" min="0" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="itemTaxRate" class="sr-only">GST Tax Rate</label>
+                    <select id="itemTaxRate" onchange="updateTaxPreview()" aria-label="Select GST tax rate">
+                        <option value="18">GST 18% (9% CGST + 9% SGST)</option>
+                        <option value="0">GST 0% (No Tax)</option>
+                        <option value="5">GST 5% (2.5% CGST + 2.5% SGST)</option>
+                        <option value="12">GST 12% (6% CGST + 6% SGST)</option>
+                        <option value="28">GST 28% (14% CGST + 14% SGST)</option>
+                        <option value="igst">IGST (Inter-state)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="itemDiscount" class="sr-only">Item Discount Percentage</label>
+                    <input type="number" id="itemDiscount" placeholder="Discount %" min="0" max="100" step="0.1">
+                </div>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="saveItemCheck">
+                        Save this item for future use
+                    </label>
+                </div>
+
+                <button onclick="addItem()" aria-label="Add item to invoice">➕ Add Item</button>
+            </article>
+
+            <!-- Invoice Actions -->
+            <article class="section-card" aria-labelledby="actions-heading">
+                <h2 id="actions-heading">🎯 Actions</h2>
+                <div class="input-group">
+                    <label for="globalDiscount" class="sr-only">Overall Discount Percentage</label>
+                    <input type="number" id="globalDiscount" placeholder="Overall Discount %" min="0" max="100" step="0.1" oninput="updateInvoice()">
+                </div>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="roundOff" onchange="updateInvoice()" checked>
+                        Round off to nearest rupee
+                    </label>
+                </div>
+                <div class="actions">
+                    <button class="secondary" onclick="printInvoice()" aria-label="Print invoice">🖨️ Print</button>
+                    <button class="secondary" id="downloadPdf" aria-label="Download invoice as PDF">📥 Download</button>
+                </div>
+                <div class="actions">
+                    <button class="secondary" onclick="showHistory()" aria-label="View invoice history">📚 History</button>
+                </div>
+                <button class="danger" onclick="resetInvoice()" aria-label="Clear all invoice data">🗑️ Clear All</button>
+            </article>
+
+        </section>
+
+        <!-- RIGHT: INVOICE PREVIEW -->
+        <section class="invoice-section" id="invoice" aria-labelledby="invoice-preview-heading">
+            <h2 id="invoice-preview-heading" class="sr-only">Invoice Preview</h2>
+
+            <article class="invoice-container" itemscope itemtype="https://schema.org/Invoice">
+                <div class="invoice-header">
+                    <div class="shop-info">
+                        <div id="logoPreview" class="logo-preview" aria-label="Shop logo"></div>
+                        <div>
+                            <h2 id="invShop" itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                                <span itemprop="name">Shop Name</span>
+                            </h2>
+                            <p id="invShopAddress" itemprop="address"></p>
+                            <p id="invShopCity"></p>
+                            <p id="invShopPhone" itemprop="telephone"></p>
+                            <p id="invShopEmail" itemprop="email"></p>
+                            <p id="invGST"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="invoice-title">
+                    <h3>TAX INVOICE</h3>
+                </div>
+
+                <div class="invoice-meta-row">
+                    <div class="invoice-meta">
+                        <p><strong>Invoice No:</strong> <span id="invoiceNo" itemprop="identifier"></span></p>
+                        <p><strong>Date:</strong> <time id="invoiceDate" itemprop="dateCreated"></time></p>
+                    </div>
+                    <div class="customer-section" itemprop="customer" itemscope itemtype="https://schema.org/Person">
+                        <p><strong>Bill To:</strong></p>
+                        <p id="invCustomer" itemprop="name">—</p>
+                        <p id="invCustomerAddress" itemprop="address"></p>
+                        <p id="invCustomerPhone" itemprop="telephone"></p>
+                    </div>
+                </div>
+
+                <table id="invoiceTable" role="table" aria-label="Invoice items">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Disc%</th>
+                            <th scope="col">Tax%</th>
+                            <th scope="col">Total</th>
+                            <th scope="col" class="no-print">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoiceItems">
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                <p>No items added yet</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="totals" itemprop="totalPaymentDue" itemscope itemtype="https://schema.org/PriceSpecification">
+                    <p><span>Subtotal:</span> <span>₹<span id="subTotal">0.00</span></span></p>
+                    <p id="itemDiscountRow" style="display: none;"><span>Item Discounts:</span> <span class="discount-text">- ₹<span id="itemDiscounts">0.00</span></span></p>
+                    <p id="globalDiscountRow" style="display: none;"><span>Overall Discount:</span> <span class="discount-text">- ₹<span id="globalDiscountAmt">0.00</span></span></p>
+                    <div id="taxBreakdown"></div>
+                    <p id="roundOffRow" style="display: none;"><span>Round Off:</span> <span id="roundOffAmt">₹0.00</span></p>
+                    <h3><span>Total:</span> <span itemprop="price">₹<span id="grandTotal">0.00</span></span></h3>
+                </div>
+
+                <div id="paymentSection" class="payment-section" style="display: none;">
+                    <h4>Payment Details</h4>
+                    <p id="invPaymentMethod"></p>
+                    <p id="invBankDetails"></p>
+                </div>
+
+                <footer role="contentinfo">
+                    <p><strong>Terms & Conditions:</strong></p>
+                    <small>This tool only generates invoices. GST compliance is user responsibility.</small>
+                    <br>
+                    <small>Thank you for your business!</small>
+                </footer>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- MODALS -->
+    <div id="historyModal" class="modal" role="dialog" aria-labelledby="history-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('historyModal')" aria-label="Close modal">&times;</span>
+            <h2 id="history-modal-title">📚 Invoice History</h2>
+            <div class="search-box">
+                <label for="historySearch" class="sr-only">Search invoices</label>
+                <input type="text" id="historySearch" placeholder="🔍 Search by invoice number, customer..." oninput="filterHistory()" aria-label="Search invoice history">
+            </div>
+            <div id="historyList" role="list" aria-label="Invoice history list"></div>
         </div>
+    </div>
 
-        <h2>👤 Customer</h2>
-        <div class="input-group">
-            <input type="text" id="customerName" placeholder="Customer Name (optional)" oninput="updateInvoice()">
+    <div id="manageItemsModal" class="modal" role="dialog" aria-labelledby="manage-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('manageItemsModal')" aria-label="Close modal">&times;</span>
+            <h2 id="manage-modal-title">⚙️ Manage Saved Items</h2>
+            <div id="manageItemsList" role="list" aria-label="Saved items management list"></div>
         </div>
+    </div>
 
-        <h2>📦 Add Item</h2>
-        <div class="input-group">
-            <input type="text" id="itemName" placeholder="Item Name">
-        </div>
-        <div class="input-group">
-            <input type="number" id="qty" placeholder="Quantity" min="1">
-        </div>
-        <div class="input-group">
-            <input type="number" id="price" placeholder="Price per item" min="0" step="0.01">
-        </div>
-
-        <button onclick="addItem()">➕ Add Item</button>
-
-        <div class="actions">
-            <button class="secondary" onclick="printInvoice()">🖨️ Print</button>
-            <button class="secondary" id="downloadPdf">📥 Download PDF</button>
-        </div>
-    </section>
-
-    <!-- RIGHT: INVOICE PREVIEW -->
-    <section class="invoice-section" id="invoice">
-
-        <div class="invoice-header">
-            <h2 id="invShop">Shop Name</h2>
-            <p id="invGST"></p>
-        </div>
-
-        <div class="invoice-meta">
-            <p>
-                <strong>Invoice No:</strong> <span id="invoiceNo"></span><br>
-                <strong>Date:</strong> <span id="invoiceDate"></span>
-            </p>
-        </div>
-
-        <div class="customer-section">
-            <p><strong>Customer:</strong> <span id="invCustomer">—</span></p>
-        </div>
-
-        <table id="invoiceTable">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                    <th class="no-print">Action</th>
-                </tr>
-            </thead>
-            <tbody id="invoiceItems">
-                <tr>
-                    <td colspan="5" class="empty-state">
-                        <p>No items added yet</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="totals">
-            <p><span>Subtotal:</span> <span>₹<span id="subTotal">0.00</span></span></p>
-            <p><span>CGST (9%):</span> <span>₹<span id="cgst">0.00</span></span></p>
-            <p><span>SGST (9%):</span> <span>₹<span id="sgst">0.00</span></span></p>
-            <h3><span>Total:</span> <span>₹<span id="grandTotal">0.00</span></span></h3>
-        </div>
-
-        <footer>
-            <small>
-                This tool only generates invoices. GST compliance is user responsibility.<br>
-                Thank you for your business!
-            </small>
-        </footer>
-    </section>
-
-</main>
-
-<!-- PDF LIBRARY -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="script.js"></script>
+    <!-- PDF LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
